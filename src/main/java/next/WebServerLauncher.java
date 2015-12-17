@@ -11,13 +11,13 @@ public class WebServerLauncher {
 	
 	public static void main(String[] args) throws Exception {
         String webappDirLocation = "webapp/";
-        Tomcat tomcat = new Tomcat();
-        tomcat.setPort(8080);
+        Tomcat tomcat = new Tomcat(); //톰캣 인스턴스 생성 
+        tomcat.setPort(8080); //포트번호 설정
 
-        tomcat.addWebapp("/", new File(webappDirLocation).getAbsolutePath());
+        tomcat.addWebapp("/", new File(webappDirLocation).getAbsolutePath()); //웹앱의 가장 상위의 위치를 webapp/으로 설정한다.
         logger.info("configuring app with basedir: {}", new File("./" + webappDirLocation).getAbsolutePath());
 
-        tomcat.start();
+        tomcat.start(); //톰캣을 시작한다.
         tomcat.getServer().await();
     }
 }

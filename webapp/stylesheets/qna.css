@@ -240,6 +240,22 @@ h3 span {
     -moz-border-radius: 10px;
 }
 
+.comment comment-delete {
+	
+		position: absolute;
+		top: 0;
+		right: -35px;
+}
+
+.comment .comment-delete a{
+	
+		color: #869AB1;
+		text-decoration: none;
+	
+}	
+
+
+
 .comment .about {
     text-indent: -999em;
     display: block;
@@ -252,6 +268,12 @@ h3 span {
 	position: absolute;
 	top: 4px;
 	left: -4px;
+}
+
+.commnet .about .deleteComment {
+	
+	float:right;
+	
 }
 
 /** Form **/
